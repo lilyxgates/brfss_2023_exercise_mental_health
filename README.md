@@ -29,10 +29,10 @@ This script outputs:
 * scikit-learn
 * os
 
-## Source
+## Sources
 
-2023 BRFSS Survey Data and Documentation https://www.cdc.gov/brfss/annual_data/annual_2023.html
-2023 BRFSS Data (SAS Transport Format) saved as 'brfss_data.xpt'
+* 2023 BRFSS Survey Data and Documentation https://www.cdc.gov/brfss/annual_data/annual_2023.html
+* 2023 BRFSS Data (SAS Transport Format) saved as 'brfss_data.xpt'
 
 ## Important Columns in Original Dataset
 
