@@ -1,17 +1,33 @@
-# Module 1
-
 Written by Lily Gates  
 March 2025
 
 ## Description
-TBD
+This project analyzes the relationship between physical activity and health outcomes—specifically mental and physical health—using data from the 2023 Behavioral Risk Factor Surveillance System (BRFSS). The dataset includes self-reported survey responses from adults across the United States. The analysis focuses on differences by sex and race/ethnicity, and explores correlations between exercise frequency and poor mental health days.
+
+Key components include:
+* Data cleaning and filtering for relevant health and demographic variables
+* Recoding categorical variables for clarity
+* Visualizations of average reported health by demographic groups
+* A correlation heatmap of exercise variables and mental health indicators
 
 ## Usage
-TBD
+1. Place the raw BRFSS .xpt data file (brfss_data.xpt) in the same directory as the script.
+2. Run the Python script (brfss_analysis.py) to:
+	* Load and clean the data
+	* Generate descriptive statistics
+	* Visualize group differences and correlations
+
+This script outputs:
+* Bar plots showing average poor physical and mental health by gender and race/ethnicity
+* A correlation heatmap showing relationships between mental health and exercise behavior
 
 ## Required Dependencies
-TBD
-
+* pandas
+* numpy
+* matplotlib
+* seaborn
+* scikit-learn
+* os
 
 ## Source
 
