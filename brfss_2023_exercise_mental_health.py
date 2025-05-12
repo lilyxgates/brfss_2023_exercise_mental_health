@@ -36,6 +36,11 @@ file_path = os.path.join(current_directory, file_name)
 # Read the SAS transport file (.xpt) into a pandas DataFrame
 df = pd.read_sas(file_path)
 
+# Save original raw df to CSV
+df.to_csv('brfss_raw.csv')
+
+
+
 #########################################
 ######### DATA: All Relevant Columns #########
 #########################################
@@ -49,6 +54,7 @@ relevant_columns = [
 
 # Filter for the relevant health and demographic columns
 df_filtered = df[relevant_columns]
+
 
 #########################################
 ######### DATA: Cleaning Data  #########
@@ -71,6 +77,10 @@ df_filtered['STRENGTH'] = df_filtered['STRENGTH'].replace(special_codes_exercise
 # Drop rows with missing values for health or exercise variables
 df_filtered_clean = df_filtered.dropna(subset=['PHYSHLTH', 'MENTHLTH', 'POORHLTH', 'EXEROFT1', 'EXEROFT2', 'STRENGTH'])
 
+# Save df_filtered to CSV
+df_filtered.to_csv('brfss_filtered.csv')
+
+
 #########################################
 ######### DATA: Cleaning Data  #########
 ######### Relabel Demographics  #########
@@ -92,6 +102,10 @@ df_filtered_clean["_RACE"] = df_filtered_clean["_RACE"].map({
     8: "Hispanic", 
     9: "Don’t know/Refused"
 })
+
+# Save df_filtered_clean to CSV
+#df_filtered_clean.to_csv('brfss_filtered_clean.csv')
+
 
 ###################################
 ######### DATA: Cleaning  #########
